@@ -51,8 +51,8 @@ public class DescontoDoProduto {
             }
         }
         
-            valorcomdesconto = num1 - ((num1 * desconto) / 100);
-            System.out.println("O valor do Produto com desconto é: " + valorcomdesconto);
+        valorcomdesconto = num1 - ((num1 * desconto) / 100);
+        System.out.println("O valor do Produto com desconto é: " + valorcomdesconto);
         
         
         
