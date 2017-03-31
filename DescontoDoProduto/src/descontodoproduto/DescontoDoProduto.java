@@ -12,7 +12,7 @@ public class DescontoDoProduto {
         double num1;
         int cod;
         double desconto = 0;
-        double valordesconto;
+        double valorcomdesconto;
         
         
         Scanner scan = new Scanner(System.in);
@@ -33,26 +33,26 @@ public class DescontoDoProduto {
         
         cod = scan.nextInt();
         
-        if (num1 == 1){
+        if (cod == 1){
             desconto = 5;
                          
         }else{
-            if (num1 == 2){
+            if (cod == 2){
                 desconto = 10;
             }else{
-                if (num1 == 3){
+                if (cod == 3){
                     desconto = 20;
                     
                 }else{
-                    if (num1 == 4){
+                    if (cod == 4){
                         desconto = 50;
                     }
                 }
             }
         }
         
-            valordesconto = (num1 * desconto) / 100;
-            System.out.println("O valor do Produto com desconto é: " + valordesconto);
+            valorcomdesconto = num1 - ((num1 * desconto) / 100);
+            System.out.println("O valor do Produto com desconto é: " + valorcomdesconto);
         
         
         
