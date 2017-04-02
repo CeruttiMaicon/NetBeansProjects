@@ -19,19 +19,27 @@ public class OperadoresAritmeticos {
         /*int n1 = 3;
         int n2 = 5;
         float m = (n1 + n2) / 2;
-        System.out.println("A média é " + m);*/
+        System.out.println("A média é " + m);
+        
+        Demosntração de Arredondamento Númerico
         
         float v = 8.4f;
         int ar = (int) Math.round(v); // Arredondamento Aritmetico
-        /* 
+         
         int ar = (int) Math.abs(v);  // Arredondamento Absoluto - Transforma para numeros positivos
         int ar = (int) Math.floor(v); // Arredondamento para Baixo
         int ar = (int) Math.ceil(v);  // Arredondamento para Cima
+        System.out.println(ar); */
+        
+        // Números Randomicos (Aleatorios)
+        
+        // gerados de 15 a 50 deve se utilizar esta formula
+        
+        double ale = Math.random();
+        int n = (int) (15 + ale * (50 - 15));
+        System.out.println(n);
         
         
-        */
-        
-        System.out.println(ar);
     }
     
 }
