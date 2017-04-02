@@ -111,7 +111,8 @@ public class TelaIdade extends javax.swing.JFrame {
         
         lblIdade.setText(Integer.toString(idade));
         
-        String sit = (idade >= 18) ? "Maior de Idade":"Menor de Idade";
+        String sit = ((idade >= 16 && idade <= 18) || (idade > 70) ) ? "É OPCIONAL":"NÃO É OPCIONAL";
+        // Operador Ternario ainda não suportado
         lblSituacao.setText(sit);
         
         
