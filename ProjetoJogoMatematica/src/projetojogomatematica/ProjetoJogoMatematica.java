@@ -2,7 +2,6 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- * FECHAR AS CHAVES DIREITO
  */
 package projetojogomatematica;
 
@@ -39,6 +38,9 @@ public class ProjetoJogoMatematica {
         int opcao2 = 0;
         Scanner scan = new Scanner(System.in);
         while(ligado1){
+            
+            
+            // Menu inicial
                 
             System.out.println("             Jogo de Matemática");
             System.out.println("********************************************");
@@ -49,7 +51,7 @@ public class ProjetoJogoMatematica {
             opcao = scan.nextInt();
             
             if (opcao == 1){
-                while (ligado2){
+                while (ligado2){ // Menu de seleçao de nivel
                     System.out.println("           Selecinar Dificuldade");
                     System.out.println("********************************************");
                     System.out.println(" 1 - EASY                                  *");
@@ -68,6 +70,7 @@ public class ProjetoJogoMatematica {
                     
                     if (opcao == 1){
                         //Abrir site da Barbie!!
+                        
                         System.out.println("Modo Easy é para os fracos");
                         System.out.println("Game Over pra você seu fraco");
                         java.awt.Desktop.getDesktop().browse( new java.net.URI( "https://play.barbie.com/pt-br/game/starlight-adventure" ) );
@@ -80,8 +83,9 @@ public class ProjetoJogoMatematica {
                     }
                     
                     if (opcao == 2){
-                        while (ligado3){ // Opcao HARDCORE
+                        while (ligado3){ // Opcao HARDCORE para iniciar o game
                             
+                            // Nivel um dividido em duas partes para ficar com 50% de operações de ubtração e adição
                             int nivel = 1;
                             System.out.println("********************************************");
                             System.out.println("Nivel " + nivel + " Adição e Subtração");
@@ -94,7 +98,7 @@ public class ProjetoJogoMatematica {
                                 int num1 = aleatorio.nextInt(200);
                                 int num2 = aleatorio.nextInt(200);
                                 
-                                
+                                // contador de rodadas
                                 rodada = i +1;
                                 int somareal = num1 + num2;
                                 System.out.println("Total de Vidas " + vida + " Pontuação: " + somaponto);
@@ -111,6 +115,7 @@ public class ProjetoJogoMatematica {
                                     System.out.println("Correto!");
                                     System.out.println("********************************************");
                                 }else{
+                                    //Respista Errada + correção
                                     System.out.println("Incorreto!");
                                     System.out.println("A resposta correta seria " + somareal);
                                     System.out.println("********************************************");
@@ -133,6 +138,7 @@ public class ProjetoJogoMatematica {
                                     break;
                                 }
                                 
+                                //Gerador de numeros aleatorios
                                 int num3 = aleatorio.nextInt(200);
                                 int num4 = aleatorio.nextInt(200);
                                 
@@ -145,6 +151,8 @@ public class ProjetoJogoMatematica {
                                 System.out.print("Sua resposta: ");
                                 resp = scan.nextInt();
                                 
+                                
+                                //verificador de contas
                                 if (resp == somareal1){
                                     somaponto+=10;
                                     System.out.println("Correto!");
@@ -171,10 +179,11 @@ public class ProjetoJogoMatematica {
                             nivel++;
                             System.out.println("********************************************");
                             
-                            for (int a = 0; a < 10; a++){ //Nível 2
+                            for (int a = 0; a < 10; a++){ //Nível 2 Mltiplicação
                                 
                                 
-                                
+                                //caso o contador de vidas chegue a zero o while do game fecha e 
+                                // obriga o usuario a iniciar um novo game
                                 if (gameover == 1){
                                     ligado3 = false;
                                     break;
@@ -218,7 +227,7 @@ public class ProjetoJogoMatematica {
                             nivel++;
                             System.out.println("********************************************");
                             
-                            for (int b = 0; b < 10; b++){ //Nível 3
+                            for (int b = 0; b < 10; b++){ //Nível 3 DIVISÂO
                                 
                                 
                                 
@@ -226,6 +235,8 @@ public class ProjetoJogoMatematica {
                                     ligado3 = false;
                                     break;
                                 }
+                                
+                                //para evitar a divisão por zero ele muda para 1
                                 if (b == 0){
                                     System.out.println("Nivel " + nivel + " Divisão");
                                     System.out.println("********************************************");
@@ -269,13 +280,21 @@ public class ProjetoJogoMatematica {
                             }
                             
                                                         
-                            //Nível 4
+                            //Nível 4 ALEATÓRIO
                             nivel++;
                             System.out.println("********************************************");
                             
                             
                             for (int t = 0; t < 10; t++){
                                 
+                                /* gera um numero aleatorio até 4 
+                                * caso caia 1 ele faz a operação de adição
+                                * caso 2 faz operação de subtração
+                                * caso 3 faz operação de divisão
+                                * caso 4 faz operação de multiplicação                        
+                                * O ciclo se repete 10 vezes para gerar as perguntas do nivel 4
+                                
+                                */
                                 
                                 int onumero = aleatorio.nextInt(4);
                                 
@@ -442,7 +461,10 @@ public class ProjetoJogoMatematica {
                                         }
                                     }   
                                 }
-                                if (t == 9){ //Mostrar Pontuação
+                                if (t == 9){ //Mostrar Pontuação para o usuario
+                                    
+                                    
+                                    //
                                     
                                     System.out.println("********************************************");
                                     System.out.println("Sua Pontuação total foi de " + somaponto);
@@ -463,6 +485,8 @@ public class ProjetoJogoMatematica {
                                         System.out.println("VOCÊ É UM DEUS NA MATEMÁTICA ");
                                     }
                                     
+                                    
+                                    //Desligar os whiles e voltar ao menu para iniciar um novo game
                                     ligado2 = false;
                                     ligado3 = false;
                                     
