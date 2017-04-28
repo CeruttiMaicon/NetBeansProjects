@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Scanner;
 import java.util.Random;
-import java.util.ArrayList;
 
 /**
  *
@@ -120,7 +119,7 @@ public class ProjetoJogoMatematica {
                                     System.out.println("A resposta correta seria " + somareal);
                                     System.out.println("********************************************");
                                     somaponto-=5;
-                                    //vida--;
+                                    vida--;
                                     
                                     if (vida == 0){
                                         System.out.println("                 GAME OVER");
@@ -162,7 +161,7 @@ public class ProjetoJogoMatematica {
                                     System.out.println("A resposta correta seria " + somareal1);
                                     System.out.println("********************************************");
                                     somaponto-=5;
-                                    //vida--;
+                                    vida--;
                                     
                                     if (vida == 0){
                                         System.out.println("                 GAME OVER");
@@ -213,7 +212,7 @@ public class ProjetoJogoMatematica {
                                     System.out.println("A resposta correta seria " + multireal);
                                     System.out.println("********************************************");
                                     somaponto-=5;
-                                    //vida--;
+                                    vida--;
                                     
                                     if (vida == 0){
                                         System.out.println("                 GAME OVER");
@@ -267,7 +266,7 @@ public class ProjetoJogoMatematica {
                                     System.out.println("A resposta correta seria " + respostadivisao);
                                     System.out.println("********************************************");
                                     somaponto-=5;
-                                    //vida--;
+                                    vida--;
                                     
                                     if (vida == 0){
                                         System.out.println("                 GAME OVER");
@@ -333,7 +332,7 @@ public class ProjetoJogoMatematica {
                                         System.out.println("A resposta correta seria " + soma1real);
                                         System.out.println("********************************************");
                                         somaponto-=5;
-                                        //vida--;
+                                        vida--;
                                     
                                         if (vida == 0){
                                             System.out.println("                 GAME OVER");
@@ -370,7 +369,7 @@ public class ProjetoJogoMatematica {
                                             System.out.println("A resposta correta seria " + somareal1);
                                             System.out.println("********************************************");
                                             somaponto-=5;
-                                            //vida--;
+                                            vida--;
                                     
                                             if (vida == 0){
                                                 System.out.println("                 GAME OVER");
@@ -412,7 +411,7 @@ public class ProjetoJogoMatematica {
                                         System.out.println("A resposta correta seria " + respostadivisao);
                                         System.out.println("********************************************");
                                         somaponto-=5;
-                                        //vida--;
+                                        vida--;
                                     
                                         if (vida == 0){
                                             System.out.println("                 GAME OVER");
@@ -451,7 +450,7 @@ public class ProjetoJogoMatematica {
                                         System.out.println("A resposta correta seria " + multireal);
                                         System.out.println("********************************************");
                                         somaponto-=5;
-                                        //vida--;
+                                        vida--;
                                     
                                         if (vida == 0){
                                             System.out.println("                 GAME OVER");
